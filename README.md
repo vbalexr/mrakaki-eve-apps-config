@@ -1,0 +1,1 @@
+# MrAkaki EvE Config repository
