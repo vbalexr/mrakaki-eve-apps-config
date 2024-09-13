@@ -1,0 +1,23 @@
+management:
+  zipkin:
+    tracing:
+      endpoint:  http://zipkin:9411/
+    sampling:
+      probability: 1.0
+spring:
+  datasource:
+    url: jdbc:mariadb://database:3306/prices
+    username: root
+    password: R0Oto!
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://auth.mrakaki.com
+janice:
+  apiKey: Kd12YwNhL1TkcvmqDsk7UghrX7OIOx8O
