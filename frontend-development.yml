@@ -1,0 +1,43 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          frontend-oidc:
+            provider: spring
+            client-id: frontend
+            client-secret: secret
+            authorization-grant-type:
+              - authorization_code
+              - client_credentials
+            redirect-uri: "http://localhost:10000/login/oauth2/code/frontend-oidc"
+            scope: openid
+            client-name: frontend-oidc
+          frontend-authorization-code:
+            provider: spring
+            client-id: frontend
+            client-secret: secret
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://lcoalhost:10000/authorized"
+            scope: openid
+            client-name: frontend-authorization-code
+        provider:
+          spring:
+            issuer-uri: http://auth:10001
+management:
+  zipkin:
+    tracing:
+      endpoint:  http://localhost:9411/
+    sampling:
+      probability: 1.0
+server:
+  port: 10000
+
+logging:
+  level:
+    org.springframework.security: trace
+
+endpoints:
+  itemPrice: http://localhost:10002
+  itemDetails: http://localhost:10003
+  buyback: http://localhost:10004

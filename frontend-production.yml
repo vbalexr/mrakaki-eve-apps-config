@@ -1,0 +1,36 @@
+management:
+  zipkin:
+    tracing:
+      endpoint:  http://zipkin:9411/
+    sampling:
+      probability: 1.0
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          frontend-oidc:
+            provider: spring
+            client-id: frontend
+            client-secret: secret
+            authorization-grant-type:
+              - authorization_code
+              - client_credentials
+            redirect-uri: "https://eve.mrakaki.com/login/oauth2/code/frontend-oidc"
+            scope: openid
+            client-name: frontend-oidc
+          frontend-authorization-code:
+            provider: spring
+            client-id: frontend
+            client-secret: secret
+            authorization-grant-type: authorization_code
+            redirect-uri: "https://eve.mrakaki.com/authorized"
+            scope: openid
+            client-name: frontend-authorization-code
+        provider:
+          spring:
+            issuer-uri: https://auth.mrakaki.com
+endpoints:
+  itemDetails: http://item-detail:8080
+  itemPrice: http://item-price:8080
+  buyback: http://buyback:8080
