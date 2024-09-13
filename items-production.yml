@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:items
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://auth.mrakaki.com
+management:
+  zipkin:
+    tracing:
+      endpoint:  http://zipkin:9411/
+    sampling:
+      probability: 1.0
