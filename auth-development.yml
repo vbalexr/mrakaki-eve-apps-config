@@ -16,6 +16,22 @@ spring:
       ddl-auto: update
   security:
     oauth2:
+      client:
+        registration:
+          eve:
+            provider: eve
+            client-id: 2dad4cfd4e424d62a92733add96168b9
+            client-secret: g9y0H4jzqWdmtjBfVTi0ipyPptEOo8anOjcWlgzU
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/eve"
+            scope:
+              - publicData
+        provider:
+          eve:
+            authorization-uri: https://login.eveonline.com/v2/oauth/authorize
+            token-uri: https://login.eveonline.com/v2/oauth/token
+            jwk-set-uri: https://login.eveonline.com/oauth/jwks
+            user-info-uri: "nope"
       authorizationserver:
         issuer: http://auth:10001
         client:
@@ -41,6 +57,3 @@ rsa:
   key-id: 7e5e1f47-35d4-4b3b-a4c8-0a3f0bc8bf9c
   private-key: classpath:certs/private.pem
   public-key: classpath:certs/public.pem
-admin:
-  username: admin
-  password: ADMIN!
