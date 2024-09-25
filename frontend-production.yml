@@ -31,6 +31,5 @@ spring:
           spring:
             issuer-uri: https://auth.mrakaki.com
 endpoints:
-  itemDetails: http://item-detail:8080
-  itemPrice: http://item-price:8080
+  universe: http://universe:8080
   buyback: http://buyback:8080

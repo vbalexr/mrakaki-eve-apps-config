@@ -39,6 +39,5 @@ logging:
     org.springframework.security: trace
 
 endpoints:
-  itemPrice: http://localhost:10002
-  itemDetails: http://localhost:10003
-  buyback: http://localhost:10004
+  universe: http://localhost:10002
+  buyback: http://localhost:10003
