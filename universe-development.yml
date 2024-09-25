@@ -4,15 +4,17 @@ spring:
     username: root
     password: password
     driver-class-name: org.mariadb.jdbc.Driver
-  jpa:
-    show-sql: false
-    hibernate:
-      ddl-auto: update
+  flyway:
+    enabled: true
+    locations: classpath:migrations
+    baseline-on-migrate: true
+    validate-on-migrate: true
   security:
     oauth2:
       resourceserver:
         jwt:
           issuer-uri: http://auth:10001
+
 management:
   zipkin:
     tracing:
@@ -25,3 +27,7 @@ server:
 endpoints:
   itemDetails: http://localhost:10003
   itemPrice: http://localhost:10002
+  eve:
+    api: https://esi.evetech.net/latest
+    bsd: https://eve-static-data-export.s3-eu-west-1.amazonaws.com/tranquility/bsd.zip
+    fsd: https://eve-static-data-export.s3-eu-west-1.amazonaws.com/tranquility/fsd.zip
