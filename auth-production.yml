@@ -5,15 +5,16 @@ management:
     sampling:
       probability: 1.0
 spring:
-  datasource:
+ datasource:
     url: jdbc:mariadb://database:3306/auth
     username: root
     password: R0Oto!
     driver-class-name: org.mariadb.jdbc.Driver
-  jpa:
-    show-sql: false
-    hibernate:
-      ddl-auto: update
+  flyway:
+    enabled: true
+    locations: classpath:migrations
+    baseline-on-migrate: true
+    validate-on-migrate: true
   security:
     oauth2:
       client:
