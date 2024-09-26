@@ -5,7 +5,7 @@ management:
     sampling:
       probability: 1.0
 spring:
- datasource:
+  datasource:
     url: jdbc:mariadb://database:3306/auth
     username: root
     password: R0Oto!
