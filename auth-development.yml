@@ -42,11 +42,11 @@ spring:
       authorizationserver:
         issuer: http://auth:10001
         client:
-          frontend:
+          buyback_frontend:
             registration:
-              client-id: frontend
+              client-id: buyback_frontend
               client-secret: "{noop}secret"
-              client-name: Frontend client
+              client-name: Buyback Frontend client
               client-authentication-methods:
                 - client_secret_basic
               authorization-grant-types:
@@ -54,7 +54,7 @@ spring:
                 - refresh_token
                 - client_credentials
               redirect-uris:
-                - http://localhost:10000/login/oauth2/code/frontend-oidc
+                - http://localhost:10000/login/oauth2/code/buyback_frontend-oidc
                 - http://lcoalhost:10000/authorized
                 - https://oauthdebugger.com/debug
               scopes:

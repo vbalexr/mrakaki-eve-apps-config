@@ -9,24 +9,24 @@ spring:
     oauth2:
       client:
         registration:
-          frontend-oidc:
+          buyback_frontend-oidc:
             provider: spring
-            client-id: frontend
+            client-id: buyback_frontend
             client-secret: secret
             authorization-grant-type:
               - authorization_code
               - client_credentials
-            redirect-uri: "https://eve.mrakaki.com/login/oauth2/code/frontend-oidc"
+            redirect-uri: "https://eve.mrakaki.com/login/oauth2/code/buyback_frontend-oidc"
             scope: openid
             client-name: frontend-oidc
-          frontend-authorization-code:
+          buyback_frontend-authorization-code:
             provider: spring
-            client-id: frontend
+            client-id: buyback_frontend
             client-secret: secret
             authorization-grant-type: authorization_code
             redirect-uri: "https://eve.mrakaki.com/authorized"
             scope: openid
-            client-name: frontend-authorization-code
+            client-name: buyback_frontend-authorization-code
         provider:
           spring:
             issuer-uri: https://auth.mrakaki.com
