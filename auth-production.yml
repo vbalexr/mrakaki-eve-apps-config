@@ -48,8 +48,8 @@ spring:
                 - refresh_token
                 - client_credentials
               redirect-uris:
-                - https://eve.mrakaki.com/login/oauth2/code/buyback_frontend-oidc
-                - https://eve.mrakaki.com/authorized
+                - https://buyback.mrakaki.com/login/oauth2/code/buyback_frontend-oidc
+                - https://buyback.mrakaki.com/authorized
               scopes:
                 - "openid"
                 - "profile"
