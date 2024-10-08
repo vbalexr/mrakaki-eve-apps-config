@@ -36,9 +36,9 @@ spring:
       authorizationserver:
         issuer: https://auth.mrakaki.com
         client:
-          frontend:
+          buyback_frontend:
             registration:
-              client-id: frontend
+              client-id: buyback_frontend
               client-secret: "{noop}secret"
               client-name: Frontend client
               client-authentication-methods:
@@ -48,7 +48,7 @@ spring:
                 - refresh_token
                 - client_credentials
               redirect-uris:
-                - https://eve.mrakaki.com/login/oauth2/code/frontend-oidc
+                - https://eve.mrakaki.com/login/oauth2/code/buyback_frontend-oidc
                 - https://eve.mrakaki.com/authorized
               scopes:
                 - "openid"
