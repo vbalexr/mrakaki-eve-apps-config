@@ -32,4 +32,4 @@ spring:
             issuer-uri: https://auth.mrakaki.com
 endpoints:
   universe: http://universe:8080
-  buyback: http://buyback:8080
+  buyback: http://buyback-backend:8080
