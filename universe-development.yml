@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mariadb://localhost:3306/universe
+    url: jdbc:mariadb://10.0.11.35:3306/universe
     username: root
-    password: password
+    password: R0Oto!
     driver-class-name: org.mariadb.jdbc.Driver
   flyway:
     enabled: true
