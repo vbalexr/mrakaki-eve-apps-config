@@ -8,6 +8,7 @@ spring:
   datasource:
     url: jdbc:mariadb://10.0.11.49:3306/buyback
     username: eve_app
+    password: R0Oto!
     driver-class-name: org.mariadb.jdbc.Driver
   flyway:
     enabled: true
