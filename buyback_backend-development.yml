@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mariadb://10.0.11.35:3306/buyback
+    url: jdbc:mariadb://localhost:3306/auth
     username: root
-    password: R0Oto!
+    password: password
     driver-class-name: org.mariadb.jdbc.Driver
   flyway:
     enabled: true
