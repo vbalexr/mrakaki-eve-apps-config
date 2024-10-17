@@ -6,8 +6,8 @@ management:
       probability: 1.0
 spring:
   datasource:
-    url: jdbc:mariadb://database:3306/universe
-    username: root
+    url: jdbc:mariadb://10.0.11.49:3306/universe
+    username: eve_app
     password: R0Oto!
     driver-class-name: org.mariadb.jdbc.Driver
   flyway:

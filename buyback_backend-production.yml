@@ -6,9 +6,8 @@ management:
       probability: 1.0
 spring:
   datasource:
-    url: jdbc:mariadb://database:3306/buyback
-    username: root
-    password: R0Oto!
+    url: jdbc:mariadb://10.0.11.49:3306/buyback
+    username: eve_app
     driver-class-name: org.mariadb.jdbc.Driver
   flyway:
     enabled: true
