@@ -62,6 +62,7 @@ spring:
               scopes:
                 - "openid"
                 - "profile"
+                - esi-markets.structure_markets.v1
 rsa:
   key-id: 7e5e1f47-35d4-4b3b-a4c8-0a3f0bc8bf9c
   private-key: classpath:certs/private.pem
