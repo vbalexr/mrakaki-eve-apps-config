@@ -22,6 +22,14 @@ spring:
             redirect-uri: "http://lcoalhost:10000/authorized"
             scope: openid
             client-name: buyback_frontend-authorization-code
+          buyback_frontend-markets:
+            provider: spring
+            client-id: buyback_frontend
+            client-secret: secret
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://localhost:10000/login/oauth2/code/buyback_frontend-markets"
+            scope: openid esi-markets.structure_markets.v1
+            client-name: buyback_frontend-authorization-structure
         provider:
           spring:
             issuer-uri: http://auth:10001
