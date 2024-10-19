@@ -27,6 +27,7 @@ spring:
             redirect-uri: "{baseUrl}/login/oauth2/code/eve"
             scope:
               - publicData
+              - esi-markets.structure_markets.v1
         provider:
           eve:
             authorization-uri: https://login.eveonline.com/v2/oauth/authorize
