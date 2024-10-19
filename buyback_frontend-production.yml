@@ -32,7 +32,7 @@ spring:
             client-id: buyback_frontend
             client-secret: secret
             authorization-grant-type: authorization_code
-            redirect-uri: "http://localhost:10000/login/oauth2/code/buyback_frontend-markets"
+            redirect-uri: "https://buyback.mrakaki.com/login/oauth2/code/buyback_frontend-markets"
             scope: openid,esi-markets.structure_markets.v1
             client-name: buyback_frontend-authorization-structure
         provider:
