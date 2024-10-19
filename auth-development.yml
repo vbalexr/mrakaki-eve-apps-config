@@ -43,6 +43,21 @@ spring:
       authorizationserver:
         issuer: http://auth:10001
         client:
+          universe_backend:
+            registration:
+              client-id: universe_backend
+              client-secret: "{noop}secret"
+              client-name: universe_backend client
+              client-authentication-methods:
+                - client_secret_basic
+              authorization-grant-types:
+                - client_credentials
+              redirect-uris:
+                - http://localhost:10000/login/oauth2/code/universe_backend
+                - http://lcoalhost:10002/authorized
+                - https://oauthdebugger.com/debug
+              scopes:
+                - "openid"
           buyback_frontend:
             registration:
               client-id: buyback_frontend
@@ -67,3 +82,5 @@ rsa:
   key-id: 7e5e1f47-35d4-4b3b-a4c8-0a3f0bc8bf9c
   private-key: classpath:certs/private.pem
   public-key: classpath:certs/public.pem
+communication:
+  token: asdgnkl98024y8723sd

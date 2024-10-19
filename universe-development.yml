@@ -31,3 +31,5 @@ endpoints:
     api: https://esi.evetech.net/latest
     bsd: https://eve-static-data-export.s3-eu-west-1.amazonaws.com/tranquility/bsd.zip
     fsd: https://eve-static-data-export.s3-eu-west-1.amazonaws.com/tranquility/fsd.zip
+communication:
+  token: asdgnkl98024y8723sd
