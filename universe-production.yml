@@ -30,3 +30,4 @@ endpoints:
     fsd: https://eve-static-data-export.s3-eu-west-1.amazonaws.com/tranquility/fsd.zip
 communication:
   token: asdgnkl98024y8723sd
+  authEnpoint: https://auth.mrakaki.com
