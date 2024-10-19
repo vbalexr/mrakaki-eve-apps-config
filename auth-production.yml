@@ -49,6 +49,7 @@ spring:
                 - client_credentials
               redirect-uris:
                 - https://buyback.mrakaki.com/login/oauth2/code/buyback_frontend-oidc
+                - https://buyback.mrakaki.com/login/oauth2/code/buyback_frontend-markets
                 - https://buyback.mrakaki.com/authorized
               scopes:
                 - "openid"
