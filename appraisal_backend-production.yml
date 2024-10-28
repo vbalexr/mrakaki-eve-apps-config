@@ -1,0 +1,26 @@
+sprint:
+  datasource:
+    url: jdbc:mariadb://10.0.11.49:3306/appraisal
+    username: root
+    password: password
+    driver-class-name: org.mariadb.jdbc.Driver
+  flyway:
+    enabled: true
+    locations: classpath:migrations
+    baseline-on-migrate: true
+    validate-on-migrate: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://auth.mrakaki.com
+
+management:
+  zipkin:
+    tracing:
+      endpoint:  http://zipkin:9411/api/v2/spans
+    sampling:
+      probability: 1.0
+
+endpoints:
+  universe: http://universe:8080

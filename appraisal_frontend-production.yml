@@ -7,3 +7,4 @@ management:
 
 endpoints:
   universe: http://universe:8080
+  backend: http://appraisal-backend:10005
