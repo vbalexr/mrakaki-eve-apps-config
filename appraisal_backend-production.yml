@@ -1,4 +1,4 @@
-sprint:
+spring:
   datasource:
     url: jdbc:mariadb://10.0.11.49:3306/appraisal
     username: root
