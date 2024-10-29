@@ -9,4 +9,4 @@ server:
 
 endpoints:
   universe: http://localhost:10002
-  backend: http://localhost:10005
+  appraisal: http://localhost:10005
