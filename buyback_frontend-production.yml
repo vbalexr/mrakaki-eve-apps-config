@@ -41,3 +41,4 @@ spring:
 endpoints:
   universe: http://universe:8080
   buyback: http://buyback-backend:8080
+  appraisal: http://appraisal-backend:8080
