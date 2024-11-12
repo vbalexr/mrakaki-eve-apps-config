@@ -4,6 +4,15 @@ management:
       endpoint:  http://zipkin:9411/api/v2/spans
     sampling:
       probability: 1.0
+  server:
+    port: 2022
+  health:
+    probes:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health
 spring:
   datasource:
     url: jdbc:mariadb://10.0.11.49:3306/auth
