@@ -15,7 +15,7 @@ management:
         include: health
 spring:
   datasource:
-    url: jdbc:mariadb://10.0.11.49:3306/auth
+    url: jdbc:mariadb://database:3306/auth
     username: eve_app
     password: R0Oto!
     driver-class-name: org.mariadb.jdbc.Driver
