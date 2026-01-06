@@ -29,6 +29,8 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: https://auth.mrakaki.com
-
+logging:
+  level:
+    root: debug
 endpoints:
   universe: http://universe:8080
