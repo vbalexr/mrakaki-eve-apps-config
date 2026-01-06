@@ -47,6 +47,9 @@ spring:
         provider:
           spring:
             issuer-uri: https://auth.mrakaki.com
+logging:
+  level:
+    root: debug
 endpoints:
   universe: http://universe:8080
   buyback: http://buyback-backend:8080
