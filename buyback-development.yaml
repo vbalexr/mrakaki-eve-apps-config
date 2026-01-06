@@ -53,7 +53,7 @@ server:
 
 logging:
   level:
-    root: trace
+    root: warn
 
 endpoints:
   universe: http://localhost:10002
