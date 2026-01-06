@@ -29,7 +29,9 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: https://auth.mrakaki.com
-
+logging:
+  level:
+    root: debug
 endpoints:
   itemDetails: http://item-detail:8080
   itemPrice: http://item-price:8080
