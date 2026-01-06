@@ -1,0 +1,61 @@
+spring:
+  h2.console.enabled: true
+  datasource:
+    url: jdbc:mariadb://localhost:3306/buyback
+    username: root
+    password: password
+    driver-class-name: org.mariadb.jdbc.Driver
+  flyway:
+    enabled: true
+    locations: classpath:migrations
+    baseline-on-migrate: true
+    validate-on-migrate: true
+  security:
+    oauth2:
+      client:
+        registration:
+          buyback_frontend-oidc:
+            provider: spring
+            client-id: buyback_frontend
+            client-secret: secret
+            authorization-grant-type:
+              - authorization_code
+              - client_credentials
+            redirect-uri: "http://localhost:10000/login/oauth2/code/buyback_frontend-oidc"
+            scope: openid
+            client-name: buyback_frontend-oidc
+          buyback_frontend-authorization-code:
+            provider: spring
+            client-id: buyback_frontend
+            client-secret: secret
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://lcoalhost:10000/authorized"
+            scope: openid
+            client-name: buyback_frontend-authorization-code
+          buyback_frontend-markets:
+            provider: spring
+            client-id: buyback_frontend
+            client-secret: secret
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://localhost:10000/login/oauth2/code/buyback_frontend-markets"
+            scope: openid,esi-markets.structure_markets.v1
+            client-name: buyback_frontend-authorization-structure
+        provider:
+          spring:
+            issuer-uri: http://auth:10001
+management:
+  zipkin:
+    tracing:
+      endpoint:  http://localhost:9411/api/v2/spans
+    sampling:
+      probability: 1.0
+server:
+  port: 10000
+
+logging:
+  level:
+    root: trace
+
+endpoints:
+  universe: http://localhost:10002
+  appraisal: http://localhost:10005
