@@ -46,9 +46,9 @@ spring:
       authorizationserver:
         issuer: https://auth.mrakaki.com
         client:
-          buyback_frontend:
+          buyback:
             registration:
-              client-id: buyback_frontend
+              client-id: buyback
               client-secret: "{noop}secret"
               client-name: Frontend client
               client-authentication-methods:
@@ -58,8 +58,8 @@ spring:
                 - refresh_token
                 - client_credentials
               redirect-uris:
-                - https://buyback.mrakaki.com/login/oauth2/code/buyback_frontend-oidc
-                - https://buyback.mrakaki.com/login/oauth2/code/buyback_frontend-markets
+                - https://buyback.mrakaki.com/login/oauth2/code/buyback-oidc
+                - https://buyback.mrakaki.com/login/oauth2/code/buyback-markets
                 - https://buyback.mrakaki.com/authorized
               scopes:
                 - "openid"
