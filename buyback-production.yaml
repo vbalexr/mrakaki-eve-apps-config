@@ -28,27 +28,27 @@ spring:
     oauth2:
       client:
         registration:
-          buyback_frontend-oidc:
+          buyback-oidc:
             provider: spring
-            client-id: buyback_frontend
+            client-id: buyback
             client-secret: secret
             authorization-grant-type:
               - authorization_code
               - client_credentials
             redirect-uri: "https://buyback.mrakaki.com/login/oauth2/code/buyback-oidc"
             scope: openid
-            client-name: frontend-oidc
-          buyback_frontend-authorization-code:
+            client-name: buyback-oidc
+          buyback-authorization-code:
             provider: spring
-            client-id: buyback_frontend
+            client-id: buyback
             client-secret: secret
             authorization-grant-type: authorization_code
             redirect-uri: "https://buyback.mrakaki.com/authorized"
             scope: openid
-            client-name: buyback_frontend-authorization-code
+            client-name: buyback_-authorization-code
           buyback_frontend-markets:
             provider: spring
-            client-id: buyback_frontend
+            client-id: buyback
             client-secret: secret
             authorization-grant-type: authorization_code
             redirect-uri: "https://buyback.mrakaki.com/login/oauth2/code/buyback-markets"
