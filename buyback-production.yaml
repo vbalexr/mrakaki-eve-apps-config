@@ -15,7 +15,7 @@ management:
         include: health
 spring:
   datasource:
-    url: jdbc:mariadb://database:3306/buyback
+    url: jdbc:mariadb://mysql.databases.svc.cluster.local:3306/buyback
     username: eve_app
     password: R0Oto!
     driver-class-name: org.mariadb.jdbc.Driver
