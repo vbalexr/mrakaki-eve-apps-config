@@ -26,7 +26,8 @@ spring:
           issuer-uri: https://auth.mrakaki.com
 logging:
   level:
-    root: warning
+    root: WARN
+
 endpoints:
   itemDetails: http://item-detail:8080
   itemPrice: http://item-price:8080
