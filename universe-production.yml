@@ -1,9 +1,4 @@
 management:
-  zipkin:
-    tracing:
-      endpoint:  http://zipkin:9411/api/v2/spans
-    sampling:
-      probability: 1.0
   server:
     port: 2022
   health:
@@ -31,7 +26,7 @@ spring:
           issuer-uri: https://auth.mrakaki.com
 logging:
   level:
-    root: debug
+    root: warning
 endpoints:
   itemDetails: http://item-detail:8080
   itemPrice: http://item-price:8080
