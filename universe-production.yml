@@ -37,4 +37,4 @@ endpoints:
     fsd: https://eve-static-data-export.s3-eu-west-1.amazonaws.com/tranquility/fsd.zip
 communication:
   token: asdgnkl98024y8723sd
-  authEndpoint: http://authentication:8080
+  authEndpoint: http://authentication:8180
