@@ -56,5 +56,5 @@ logging:
   level:
     root: debug
 endpoints:
-  universe: http://universe:8083
+  universe: http://universe:8080
   appraisal: http://appraisal-backend:8080
