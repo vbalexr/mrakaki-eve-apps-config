@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mariadb://mysql.databases.svc.cluster.local:3306/appraisal
-    username: eve_app
-    password: R0Oto!
+    url: jdbc:mariadb://mariadb.database.svc.cluster.local:3306/appraisal
+    username: mrakaki
+    password: "Wn/qu6<KB&s0[_Ex2gWz"
     driver-class-name: org.mariadb.jdbc.Driver
   flyway:
     enabled: true
