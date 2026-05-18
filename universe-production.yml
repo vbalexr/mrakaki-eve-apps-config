@@ -12,7 +12,7 @@ spring:
   datasource:
    url: jdbc:mariadb://mariadb.database.svc.cluster.local:3306/universe
     username: mrakaki
-    password: "Wn/qu6<KB&s0[_Ex2gWz"
+    password: IXlTvkg5ZPCSxJR6
     driver-class-name: org.mariadb.jdbc.Driver
   flyway:
     enabled: true
