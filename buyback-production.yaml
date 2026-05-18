@@ -54,7 +54,7 @@ spring:
             issuer-uri: https://auth.mrakaki.com
 logging:
   level:
-    root: debug
+    root: warning
 endpoints:
-  universe: http://universe:8080
+  universe: http://mrakaki-universe:8080
   appraisal: http://appraisal-backend:8080
